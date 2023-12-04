@@ -1,0 +1,46 @@
+{
+    "name": "Root",
+    "type": "dir",
+    "children": [
+      {
+        "name": "Directory 1",
+        "type": "dir",
+        "children": [
+          {
+            "name": "File 1.1",
+            "type": "file"
+          },
+          {
+            "name": "Directory 1.2",
+            "type": "dir",
+            "children": [
+              {
+                "name": "File 1.2.1",
+                "type": "file"
+              }
+            ]
+          }
+        ]
+        
+      },
+      {
+        "name": "Directory 2",
+        "type": "dir",
+        "children": [
+          {
+            "name": "File 2.1",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "File 3",
+        "type": "file"
+      },
+      {
+        "name": "File 4",
+        "type": "file"
+      }
+    ]
+  }
+  

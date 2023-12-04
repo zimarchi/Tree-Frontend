@@ -1,27 +1,56 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: rgb(0, 0, 0);
+  --background-start-rgb: rgb(40, 196, 227);
+  --background-end-rgb: rgb(255, 255, 255);
+  --link-colors-rgb: rgb(255, 132, 0);
+  --header-texts: rgb(0, 0, 0);
+  --header-background: white;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: rgb(255, 230, 255);
+    --background-start-rgb: rgb(30, 30, 30);
+    --background-end-rgb: rgb(200, 200, 200);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+html {
+  color: var(--foreground-rgb);
   background: linear-gradient(
       to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      var(--background-start-rgb),
+      var(--background-end-rgb)
+    );
+  border: solid 3px black;
+  min-height: 800px;
+}
+
+#header {
+  margin-bottom: 50px;
+  border: solid var(--header) 1px;
+  color: var(--header-texts);
+  background-color: var(--header-background);
+}
+
+#header a { /* refers to Link components in header*/
+  color: var(--header);
+  
+}
+
+#header p {
+  margin: 3px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+a { /* refers to Link components*/
+  color: var(--link-colors-rgb);
+}
+
+button {
+  width : 200px;
 }
