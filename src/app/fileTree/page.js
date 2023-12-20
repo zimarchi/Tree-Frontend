@@ -2,13 +2,10 @@
 
 import React from "react";
 import FileTree from "@/components/FileTree";
-import { useRouter } from 'next/navigation'
 
 const treeExample = require("@/misc/treeExample");
 
-export default function FileTreePage ({root}) {
-
-  const router = useRouter();
+export default function FileTreePage () {
 
   return (
     <div>
