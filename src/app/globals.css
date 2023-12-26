@@ -1,46 +1,49 @@
 :root {
-  --foreground-rgb: rgb(0, 0, 0);
+  /*variables in light mode*/
   --background-start-rgb: rgb(40, 196, 227);
   --background-end-rgb: rgb(255, 255, 255);
-  --link-colors-rgb: rgb(255, 132, 0);
-  --header-texts: rgb(0, 0, 0);
+  --links-color-rgb: rgb(255, 132, 0);
+  --buttons-background-color: rgb(248, 255, 40);
+
+  /*variables in header*/
   --header-background: white;
+  --header-texts: rgb(68, 127, 60);
+  --header-link-colors-rgb: rgb(0, 255, 42);
 }
 
+/*variables in dark mode*/
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: rgb(255, 230, 255);
     --background-start-rgb: rgb(30, 30, 30);
     --background-end-rgb: rgb(200, 200, 200);
+    --links-color-rgb: rgb(82, 18, 220);
+    --buttons-background-color: rgb(81, 83, 23);
   }
 }
 
+/*elements in app/layout*/
 html {
-  color: var(--foreground-rgb);
   background: linear-gradient(
       to bottom,
       var(--background-start-rgb),
       var(--background-end-rgb)
     );
-  border: solid 3px black;
-  min-height: 800px;
+  min-height: 1000px;
 }
 
 #header {
-  margin-bottom: 50px;
-  border: solid var(--header) 1px;
+  margin-bottom: 10px;
   color: var(--header-texts);
   background-color: var(--header-background);
+  font-size: xx-large;
 }
 
-#header a { /* refers to Link components in header*/
-  color: var(--header);
-  
+#header a { /* the a refers to Link component in header*/
+  color: var(--header-link-colors-rgb);
+  font-size: 1.5rem;
 }
 
-#header p {
-  margin: 3px;
-}
+/*elements in app/page*/
 
 main {
   display: flex;
@@ -48,9 +51,10 @@ main {
 }
 
 a { /* refers to Link components*/
-  color: var(--link-colors-rgb);
+  color: var(--links-color-rgb);
 }
 
 button {
   width : 200px;
+  background-color: var(--buttons-background-color);
 }

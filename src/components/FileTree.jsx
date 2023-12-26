@@ -13,14 +13,15 @@ export default function FileTree ({root, depth}) {
             listStyle: "none",
             marginLeft: 30,
             color: `rgb(
-                      ${ 10*depth > 255 ? 255 : 10*depth },
-                      ${ 30*depth > 255 ? 255 : 30*depth },
-                      ${ 50*depth > 255 ? 255 : 50*depth }
+                      ${ 42*depth > 255 ? 255 : 42*depth },
+                      ${ 27*depth > 255 ? 255 : 27*depth },
+                      ${ 16*depth > 255 ? 255 : 16*depth }
                     )`,
             fontWeight: root.type === "file" ? "normal":"bold",
             fontSize: 20,
           }}
-          onClick = {handleExpand} >
+          onClick = {handleExpand}
+        >
           {root.type === "file" ? "" : (isExpanded ? "(-) " : "(+) ")}
           {root.name}
           {isExpanded && root.children?.map (

@@ -10,7 +10,7 @@ export default function Home () {
     return (
         <main>
             <Link href = '/users'> Vers Users</Link>
-            <button onClick={()=> router.push ('/fileTree')}>Vers le Tree</button>
+            <button onClick={()=> router.push ('/fileTree')}>Ouvrir Tree</button>
         </main>
         );
   }
