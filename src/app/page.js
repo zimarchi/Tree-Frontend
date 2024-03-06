@@ -11,6 +11,7 @@ export default function Home () {
         <main>
             <Link href = '/users'> Vers Users</Link>
             <button onClick={()=> router.push ('/fileTree')}>Ouvrir Tree</button>
+            <button onClick={()=> router.push ('/assemblyLine')}>Ouvrir Assembly Line</button>
         </main>
         );
   }

@@ -10,7 +10,6 @@ export default function FileTreePage () {
   return (
     <div>
 
-
       <FileTree root={treeExample} depth = {0}/>
 
     </div>

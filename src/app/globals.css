@@ -3,7 +3,7 @@
   --background-start-rgb: rgb(40, 196, 227);
   --background-end-rgb: rgb(255, 255, 255);
   --links-color-rgb: rgb(255, 132, 0);
-  --buttons-background-color: rgb(248, 255, 40);
+  --buttons-background-color: rgb(54, 255, 40);
 
   /*variables in header*/
   --header-background: white;
@@ -57,4 +57,23 @@ a { /* refers to Link components*/
 button {
   width : 200px;
   background-color: var(--buttons-background-color);
+}
+
+#stagesContainer {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between; 
+}
+
+div[data-testid="stage"] {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: yellow;
 }
